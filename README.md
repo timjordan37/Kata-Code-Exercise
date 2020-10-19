@@ -14,3 +14,6 @@ Feature
 As a babysitter
 In order to get paid for 1 night of work
 I want to calculate my nightly charge
+
+Built using IntelliJ IDEA
+Download project and open in IntelliJ IDEA, then build and run
