@@ -15,5 +15,11 @@ As a babysitter
 In order to get paid for 1 night of work
 I want to calculate my nightly charge
 
-Built using IntelliJ IDEA
-Download project and open in IntelliJ IDEA, then build and run
+Built using IntelliJ IDEA.
+
+Download project and open with IntelliJ IDEA, then build and run.
+
+You will be prompted on information you should enter.
+
+Once all information is entered, the payment calculator will do it's job and report the proper wages for the shift, 
+provided that it is a valid input. Otherwise, you will be asked to enter your information again.
