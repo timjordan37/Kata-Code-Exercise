@@ -23,10 +23,10 @@ public class PayCalculator {
 
     //checks if general user input is valid
     boolean isValidUserInput() {
-        return startTime < shiftEnd && startTime >= 17 && shiftEnd >= 17 && bedTime >= 17;
+        return startTime < shiftEnd && startTime >= 17 &&  bedTime >= 17;
     }
 
-    //adds 24 to AM time for calculations and validity checks
+    //adds 24 to AM time to simplify calculations
     int amTimeConversion(int am) {
         return (am <= 4) ? am + 24 : am;
     }
@@ -52,11 +52,15 @@ public class PayCalculator {
     //main method
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("\nSimple Babysitter Pay Calculator\n");
-            System.out.println("Key:\nValid hours are between 5PM and 4AM\nStart time to bedtime: $12/hr\n" +
+            //System.out.println("\nSimple Babysitter Pay Calculator\n");
+            System.out.println("\nKey:\nValid hours are between 5PM and 4AM\nStart time to bedtime: $12/hr\n" +
                     "Bedtime to midnight: $8/hr\nMidnight to end of shift: $16/hr");
 
-            System.out.println("\nEnter shift start time in 24 hour time format:");
+            System.out.println("\nWelcome to the Babysitter Payment Portal!\nPlease enter your first name: ");
+            String name = sc.next();
+            System.out.println("\nHello " + name + "! Please enter the following shift information below " +
+                    "so we can determine appropriate payment for your shift.");
+            System.out.println("Enter shift start time in 24 hour time format:");
             int start = sc.nextInt();
             System.out.println("\nEnter shift end time in 24 hour time format:");
             int end = sc.nextInt();
@@ -67,7 +71,8 @@ public class PayCalculator {
 
             //determines whether user input is valid or not
             if (payment.isValidShiftTime() && payment.isValidUserInput()) {
-                System.out.println("\nPayment for your shift is: " + "$" + payment.payCalculations());
+                System.out.println("\nPayment for your shift is: " + "$" + payment.payCalculations() + "\nThank " +
+                        "you for using the Babysitter Payment Portal!");
             } else {
                 System.out.println(
                         "\nInvalid hours. Please enter hours from 5PM - 4AM");

@@ -2,6 +2,12 @@ plugins {
     id 'java'
 }
 
+apply plugin:'application'
+mainClassName = 'PayCalculator'
+run{
+    standardInput = System.in
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
