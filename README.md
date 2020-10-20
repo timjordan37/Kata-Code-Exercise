@@ -19,6 +19,9 @@ Built using IntelliJ IDEA.
 
 Download project and open with IntelliJ IDEA, then build and run.
 
+Or download project, unzip, and use the command 'gradle build run' via bash 
+inside of the Kata-Code-Exercise folder
+
 You will be prompted on information you should enter in the console window.
 
 Once all information is entered, the payment calculator will do it's job and report the proper wages for the shift, 
